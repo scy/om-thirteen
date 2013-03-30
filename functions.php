@@ -45,5 +45,12 @@ function om13_enqueue() {
 		false,
 		true
 	);
+	wp_enqueue_script(
+		'om13-js',
+		"$tpldir/js/om13.js",
+		array('om13-jquery'),
+		false,
+		true
+	);
 }
 add_action('wp_enqueue_scripts', 'om13_enqueue');
