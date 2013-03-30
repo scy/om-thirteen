@@ -8,9 +8,10 @@ function om13_setup() {
 add_action('after_setup_theme', 'om13_setup');
 
 function om13_enqueue() {
+	$tpldir = get_template_directory_uri();
 	wp_enqueue_style(
 		'om13-normalize',
-		get_template_directory_uri() . '/css/normalize-1.1.0.css'
+		"$tpldir/css/normalize-1.1.0.css"
 	);
 	wp_enqueue_style('om13-style', get_stylesheet_uri());
 }
