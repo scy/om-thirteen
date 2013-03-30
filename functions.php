@@ -18,5 +18,12 @@ function om13_enqueue() {
 		'om13-modernizr',
 		"$tpldir/js/modernizr-2.6.2-54684.min.js"
 	);
+	wp_enqueue_script(
+		'om13-jquery',
+		"$tpldir/js/jquery-1.9.1.min.js",
+		array(),
+		false,
+		true
+	);
 }
 add_action('wp_enqueue_scripts', 'om13_enqueue');
