@@ -1,5 +1,25 @@
 <?php
 
+/**
+ * Rewrite internal URLs (links, assets etc.) to use the host name requested by
+ * the client, not the "siteurl" option.
+ *
+ * Useful for debugging, when "siteurl" is set to "localhost", but you want to
+ * access the site from another machine.
+ *
+ * Requires the "pecl_http" PECL extension.
+ */
+function om13_rewrite_siteurls($url) {
+	if (!(WP_DEBUG && function_exists('http_build_url'))) {
+		return $url;
+	}
+	return http_build_url($url, array(
+		'host' => $_SERVER['HTTP_HOST']
+	));
+}
+add_filter('option_siteurl', 'om13_rewrite_siteurls');
+add_filter('theme_root_uri', 'om13_rewrite_siteurls');
+
 function om13_setup() {
 	add_theme_support('post-formats', array(
 		'quote',
