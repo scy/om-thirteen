@@ -4,15 +4,11 @@ bloginfo('charset');
 echo '"?' . '>';
 ?>
 <!DOCTYPE html>
-<!--[if IE 7]>
-<html class="no-js ie ie7" <?php language_attributes();?>>
-<![endif]-->
-<!--[if IE 8]>
-<html class="no-js ie ie8" <?php language_attributes();?>>
-<![endif]-->
-<!--[if !(IE 7) | !(IE 8)]><!-->
-<html class="no-js no-ie" <?php language_attributes();?>>
-<!--<![endif]-->
+<!--[if lt IE 7]>  <html class="no-js ie-lt9 ie-lt8 ie-lt7" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 7]>     <html class="no-js ie-lt9 ie-lt8"        <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8]>     <html class="no-js ie-lt9"               <?php language_attributes(); ?>> <![endif]-->
+<!--[if gt IE 8]>  <html class="no-js ie-ok"                <?php language_attributes(); ?>> <![endif]-->
+<!--[if !IE]><!--> <html class="no-js no-ie"                <?php language_attributes(); ?>> <!--<![endif]-->
 
 <head>
 <meta charset="<?php bloginfo('charset'); ?>" />
