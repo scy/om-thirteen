@@ -14,5 +14,9 @@ function om13_enqueue() {
 		"$tpldir/css/normalize-1.1.0.css"
 	);
 	wp_enqueue_style('om13-style', get_stylesheet_uri());
+	wp_enqueue_script(
+		'om13-modernizr',
+		"$tpldir/js/modernizr-2.6.2-54684.min.js"
+	);
 }
 add_action('wp_enqueue_scripts', 'om13_enqueue');
