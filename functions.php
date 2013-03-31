@@ -28,6 +28,14 @@ function om13_setup() {
 }
 add_action('after_setup_theme', 'om13_setup');
 
+function om13_wait_for_going_live() {
+	// Go live automatically on 2013-04-08 21:00 CEST.
+	if (time() < 1365447600 && !is_user_logged_in()) {
+		wp_die('Die Website der #om13 ist demnächst verfügbar. Bei Fragen kannst du gern den Twitteraccount <a href="https://twitter.com/openmindkonf">@openmindkonf</a> kontaktieren. Wir freuen uns auf dich!'); // TODO: __
+	}
+}
+add_action('get_header', 'om13_wait_for_going_live');
+
 function om13_enqueue() {
 	$tpldir = get_template_directory_uri();
 	wp_enqueue_style(
