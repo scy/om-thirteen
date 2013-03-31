@@ -24,6 +24,7 @@ function om13_setup() {
 	add_theme_support('post-formats', array(
 		'quote',
 	));
+	register_nav_menu('primary', 'Kopfbereich'); // TODO: __
 }
 add_action('after_setup_theme', 'om13_setup');
 

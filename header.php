@@ -25,9 +25,18 @@ echo '"?' . '>';
 
 <body <?php body_class(); ?>>
 
+<div id="document">
+
 <div id="page">
 
-<header>
+<header id="top" class="cf">
+<div id="logo"><a href="<?php echo esc_url(home_url('/')); ?>" title="zur Startseite"><img src="<?php echo esc_url(get_template_directory_uri() . '/img/logo-header.png'); ?>" width="288" height="126" alt="Logo der #om13 mit Slogan: challenge accepted." /></a></div><?php // TODO: __ ?>
+<?php wp_nav_menu(array(
+	'theme_location' => 'primary',
+	'container' => 'nav',
+	'container_id' => 'nav-menu',
+)); ?>
 </header>
+<hr />
 
 <div id="main">
