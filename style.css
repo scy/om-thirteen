@@ -119,11 +119,27 @@ hr {
 	background: url('img/dotted.png') repeat-x;
 }
 
-h1 {
+h1, article.format-quote {
 	font-family: 'GeoSansLight', 'Conv_GeosansLight', sans-serif;
 }
 
 h1, h1 a {
 	color: #ce4b29;
 	text-decoration: none;
+}
+
+article.format-quote {
+	color: #ce4b29;
+	font-size: 150%;
+	text-align: right;
+}
+
+article.format-quote blockquote {
+	text-align: center;
+	font-size: 150%;
+	margin-bottom: 0.5em;
+}
+
+article.format-quote blockquote p {
+	margin: 0.5em 0;
 }
