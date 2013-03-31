@@ -55,3 +55,18 @@ function om13_enqueue() {
 	);
 }
 add_action('wp_enqueue_scripts', 'om13_enqueue');
+
+function om13_filter_posts($query) {
+	if (is_home()) { // TODO: This should probably apply to more request types.
+		$query->set('tax_query', array(
+			array(
+				'taxonomy' => 'post_format',
+				'field'    => 'slug',
+				'operator' => 'NOT IN',
+				'terms'    => array('post-format-quote'),
+			),
+		));
+	}
+	return $query;
+}
+add_filter('pre_get_posts', 'om13_filter_posts');
