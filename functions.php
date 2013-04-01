@@ -65,7 +65,14 @@ function om13_enqueue() {
 add_action('wp_enqueue_scripts', 'om13_enqueue');
 
 function om13_filter_posts($query) {
-	if (is_home()) { // TODO: This should probably apply to more request types.
+	if (is_home()       // TODO: This should probably apply to more request types.
+	 && is_main_query() // Only modify WP's own main query.
+	 && !is_admin()     // Don't modify any admin panel functionality.
+	 && (               // Don't modify if asked to not modify.
+	     !isset($query->query_vars['skip_om13_filter_posts'])
+	  || !$query->query_vars['skip_om13_filter_posts']
+	    )
+	) {
 		$query->set('tax_query', array(
 			array(
 				'taxonomy' => 'post_format',
