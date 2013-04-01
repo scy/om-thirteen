@@ -117,11 +117,21 @@ body {
 	clear: both;
 }
 
+/* The dotted <hr>. Use the (more beautiful) background image on non-retina
+ * devices, but a dotted border on retina devices, because else, they may scale
+ * up the background image and make it look really ugly. */
 hr {
-	height: 1px;
 	margin: 1em 0;
 	border: none;
+}
+html.no-js hr, html.no-retina hr {
+	height: 1px;
 	background: url('img/dotted.png') repeat-x;
+}
+html.retina hr {
+	height: 0;
+	border-top: 1px dotted #3a3a3a;
+	background: none;
 }
 
 h1, article.format-quote {
