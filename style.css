@@ -122,7 +122,7 @@ body {
  * devices, but a dotted border on retina devices, because else, they may scale
  * up the background image and make it look really ugly. */
 hr {
-	margin: 1em 0;
+	margin: 2em 0;
 	border: none;
 }
 html.no-js hr, html.no-retina hr {
