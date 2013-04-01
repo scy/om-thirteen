@@ -27,7 +27,8 @@ body {
 }
 
 #document {
-	border-top: 6px solid #e94e1b;
+	border: 6px solid #e94e1b;
+	border-style: solid none;
 }
 
 #page {
