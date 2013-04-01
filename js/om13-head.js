@@ -1,7 +1,7 @@
-(function ($) {
+(function () {
 	'use strict';
-	$('html').addClass(
+	document.documentElement.className += (
 		(typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 1.6)
-			? 'retina' : 'no-retina'
+			? ' retina' : ' no-retina'
 	);
-})(jQuery);
+})();

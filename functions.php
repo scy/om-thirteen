@@ -48,16 +48,16 @@ function om13_enqueue() {
 		"$tpldir/js/modernizr-2.6.2-54684.min.js"
 	);
 	wp_enqueue_script(
+		'om13-head',
+		"$tpldir/js/om13-head.js",
+		array(),
+		false,
+		false
+	);
+	wp_enqueue_script(
 		'om13-jquery',
 		"$tpldir/js/jquery-1.9.1.min.js",
 		array(),
-		false,
-		true
-	);
-	wp_enqueue_script(
-		'om13-js',
-		"$tpldir/js/om13.js",
-		array('om13-jquery'),
 		false,
 		true
 	);
