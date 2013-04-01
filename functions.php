@@ -17,8 +17,14 @@ function om13_rewrite_siteurls($url) {
 		'host' => $_SERVER['HTTP_HOST']
 	));
 }
-add_filter('option_siteurl', 'om13_rewrite_siteurls');
-add_filter('theme_root_uri', 'om13_rewrite_siteurls');
+foreach (array(
+	'option_siteurl',
+	'theme_root_uri',
+	'page_link',
+	'post_link',
+) as $tag) {
+	add_filter($tag, 'om13_rewrite_siteurls');
+}
 
 function om13_setup() {
 	add_theme_support('post-formats', array(
