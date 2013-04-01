@@ -159,3 +159,24 @@ article.format-quote blockquote {
 article.format-quote blockquote p {
 	margin: 0.5em 0;
 }
+
+.entry-footer {
+	font-size: 75%;
+	display: inline;
+	background: #d8d8d8;
+	padding: 0.3em 0;
+	text-transform: uppercase;
+}
+
+.entry-footer, .entry-footer a {
+	color: #3a3a3a;
+	text-decoration: none;
+}
+
+.entry-footer .meta-piece {
+	margin: 0 0.5em;
+	white-space: nowrap;
+}
+.entry-footer .meta-piece-sep {
+	display: none;
+}
