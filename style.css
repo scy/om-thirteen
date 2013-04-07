@@ -143,6 +143,10 @@ a:visited {
 	color: #73270e;
 }
 
+p {
+	line-height: 130%;
+}
+
 h1, article.format-quote {
 	font-family: 'GeoSansLight', 'Conv_GeosansLight', sans-serif;
 }
