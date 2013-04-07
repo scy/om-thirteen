@@ -54,6 +54,14 @@ body {
 
 #logo {
 	float: left;
+	max-width: 288px;
+}
+
+#tagline {
+	padding-top: 0.5em;
+	color: #555;
+	font-size: 90%;
+	text-align: center;
 }
 
 #nav-menu {

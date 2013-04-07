@@ -30,7 +30,7 @@ echo '"?' . '>';
 <div id="page">
 
 <header id="top" class="cf">
-<div id="logo"><a href="<?php echo esc_url(home_url('/')); ?>" title="zur Startseite"><img src="<?php echo esc_url(get_template_directory_uri() . '/img/logo-header.png'); ?>" width="288" height="126" alt="Logo der #om13 mit Slogan: challenge accepted." /></a></div><?php // TODO: __ ?>
+<div id="logo"><a href="<?php echo esc_url(home_url('/')); ?>" title="zur Startseite"><img src="<?php echo esc_url(get_template_directory_uri() . '/img/logo-header.png'); ?>" width="288" height="126" alt="Logo der #om13 mit Slogan: challenge accepted." /></a><div id="tagline">23.–25.08.2013 • Jugendherberge Kassel</div></div><?php // TODO: __ ?>
 <?php wp_nav_menu(array(
 	'theme_location' => 'primary',
 	'container' => 'nav',
