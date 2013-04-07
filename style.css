@@ -192,3 +192,13 @@ article.format-quote blockquote p {
 .entry-footer .meta-piece-sep {
 	display: none;
 }
+
+.page-footer {
+	font-size: 70%;
+	text-align: center;
+	margin: 2em 0;
+}
+
+.page-footer, .page-footer a, .page-footer a:visited {
+	color: #888;
+}
