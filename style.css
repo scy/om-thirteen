@@ -156,6 +156,10 @@ h1, h1 a, h1 a:visited {
 	text-decoration: none;
 }
 
+.entry-content {
+	margin-bottom: 2em;
+}
+
 article.format-quote {
 	color: #e94e1b;
 	font-size: 150%;
